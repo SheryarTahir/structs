@@ -1,3 +1,25 @@
+#[derive(Debug)]
+struct Rectangle {
+    width: u32,
+    height: u32
+}
+
+fn main() {
+
+    let rectangle = Rectangle { 
+        width: 31,
+         height: 30
+    };
+    let area = calculate_area(&rectangle);
+
+    println!("The area of {:#?} is: {}", rectangle, area);
+}
+
+fn calculate_area(rectangle: &Rectangle) -> u32{
+    rectangle.width * rectangle.height
+}
+
+/* 
 struct Color (u8, u8, u8);
 struct Point (u8, u8, u8);
 
@@ -21,7 +43,7 @@ fn move_point(point: Point) {
         "The cursor was moved X = {}, Y = {}, Z = {}" ,
         point.0, point.1, point.2
     )
-}
+} */
 
 /* 
 struct User {
